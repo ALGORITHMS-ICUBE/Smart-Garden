@@ -24,7 +24,7 @@ void loop() {
   delay(100);
   if (moisture_value >= 500)                           //checks if the soil is dry and needed to be watered 
   {
-    digitalWrite(relay, LOW);
+    digitalWrite(relay, LOW);                          //if dry the relay is turned ON
     delay(100);
     motor_value = analogRead(motor);                  //only during this condition the motor value is read
     motor_voltage = (5. / 1023.) * motor_value;       //finding the motor voltage
